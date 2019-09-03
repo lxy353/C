@@ -1,0 +1,20 @@
+cs211
+#include<iostream>
+using namespace std;
+
+int main(){
+    int i=1;
+    int result=1;
+    for(i=1;i<=100;i++){
+        result = i*i;
+        if((result%10)/2==1){
+            result = result/10;
+        if((result%10)/2==1){
+            cout << "Result:"<<i<<"*"<<i<<"="<<i*i;
+            break;
+        }
+        }
+        i++;
+    }
+    return 0;
+}
