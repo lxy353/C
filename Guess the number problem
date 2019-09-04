@@ -1,0 +1,32 @@
+＃include<iostream>
+#include<ctime>
+#include<cstdlib>
+
+int main(){
+int n = 0;
+bool guss_more = true;
+stand(time(nullptr));
+int target = rand()%50 + 1;
+do{
+   cout <<"Give me a guess:";
+   cin >> n;
+   if (n == 0){
+   cout << "No way";
+   guess_more = false
+   }
+   else if (n > target){
+   cout << "Guess too high."<< endl;
+   }
+
+   else if (n < target){
+   cout << "Guess too low."<< endl;
+   }
+   else {
+   cout << "you win";
+   cout << "Answer is "<< n
+   do_more = false;
+   }
+   }
+while （do_more);
+return 0;
+}
