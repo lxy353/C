@@ -9,7 +9,7 @@
        for (int i =0; i<n1; i++){
        int sum;
        sum= (( str1[i]-'0') + (str2[i]- '0') + carry );
-       ............
+       int carry;
        carry = sum/10
        }
       
