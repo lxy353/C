@@ -1,0 +1,41 @@
+#include<iostream>
+ #include<cmath>
+ #include<string>
+ #include<algorithm>
+ using namespace std;
+ string add(string num1, string num2){
+      if(num1.length() < num2.length()){
+                swap(num1, num2);
+                }
+       int i = num1.length() - 1;
+       int j = num1.length() - 1;
+       int carry = 0;
+       string ans = " ";
+       while(i>=0 ){
+        int curr;
+        if(j >= 0){
+            curr = num1[i]-'0'+ num2[j]-'0' + carry;
+        }
+        else{    
+        curr = num1[i]-'0'+ carry;
+        carry = curr/10;
+        curr = curr%10;
+        }
+        ans = to_string + ans;
+        i--;
+        j--;
+       }
+         if (carry ==1){
+        ans = "1" +ans;
+        }
+       return ans;
+ }
+        
+ int main(){
+     string num1;
+     string num2;
+     cin >> num1;
+     cin >> num2;
+     cout <<  add ( num1, num2);
+     return 0;
+     }
