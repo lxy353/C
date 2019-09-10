@@ -21,7 +21,7 @@
         carry = curr/10;
         curr = curr%10;
         }
-        ans = to_string + ans;
+        ans = to_string(curr) + ans;
         i--;
         j--;
        }
