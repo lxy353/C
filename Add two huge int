@@ -1,10 +1,11 @@
  #include<iostream>
  #include<cmath>
  #include<string>
+ #include<algorithm>
  using namespace std;
  string add(string num1, string num2){
       string sum;
-      if(num1.length() > num2.length()){
+      if(num1.length() < num2.length()){
                 swap(num1, num2);
                 }
        int i = num1.size() - 1;
