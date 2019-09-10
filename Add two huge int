@@ -22,5 +22,7 @@
         }
         int main(){
        cout << string add (string num1,string num2)<< endl;
+       cin >> num1;
+       cin >> num2;
       return 0;
      }
