@@ -1,16 +1,18 @@
  #include<iostream>
+ #include<cmath>
  using namespace std;
  string add(string a, string b)
  {
-       if(stra.length() > strb.length())
+       if(string a.length() > string b.length())
                 swap(stra, strb);
-       int n1 = strl.length() , int n2 = strl2.length();
+       int i = string a .size() -1;
+       int j = string b .size() - 1;
        int carry = 0;
-       for (int i =0; i<n1; i++){
-       int sum;
-       sum= (( str1[i]-'0') + (str2[i]- '0') + carry );
-       int carry;
-       carry = sum/10
+       int string a = string a [i] - '0';
+       int string b = string b [j] -'0';
+       int sum = string a + string b + carry;
+       carry = sum/10；
+       sum = sum%10;
        }
       
       
