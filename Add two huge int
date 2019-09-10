@@ -1,35 +1,43 @@
- #include<iostream>
+#include<iostream>
  #include<cmath>
  #include<string>
  #include<algorithm>
  using namespace std;
  string add(string num1, string num2){
-      string sum;
       if(num1.length() < num2.length()){
                 swap(num1, num2);
                 }
-       int i = num1.size() - 1;
-       int j = num1.size() - 1;
+       int i = num1.length() - 1;
+       int j = num2.length() - 1;
        int carry = 0;
-       sum  = " ";
-       while(i>=0 || j>=0 || carry){
-        int sum = 0;
-        if(i >= 0){sum += (num1[i] - '0');i--;}{
-         if(j >= 0){sum += (num2[j] - '0');j--;}{
-         sum += carry; 
-         carry = sum / 10;
-         sum = sum % 10;
-         }
+       string ans = " ";
+       while(i>=0 ){
+        int sum;
+        if(j >= 0){
+            sum = num1[i]-'0'+ num2[j]-'0' + carry;
         }
+        else{    
+        sum = num1[i]-'0'+ carry;
+        carry = sum/10;
+        sum = sum%10;
         }
-        return sum;
+        ans = to_string(sum) + ans;
+        i--;
+        j--;
+       }
+         if (carry ==1){
+        ans = "1" +ans;
         }
+       return ans;
+ }
         
  int main(){
-     int num1;
-     int num2;
+     string num1;
+     string num2;
+     cout << "Can you give me a num1?"<< endl;
      cin >> num1;
+     cout << "Can you give me a num2?" << endl;
      cin >> num2;
-     cout << string add (string num1,string num2)<< endl;
+     cout <<  add ( num1, num2);
      return 0;
      }
