@@ -10,18 +10,24 @@
        int j = num1.size() - 1;
        int carry = 0;
        sum  = " ";
-        while(i>=0 || j>=0 || carry){
-        long sum = 0;
+       while(i>=0 || j>=0 || carry){
+        int sum = 0;
         if(i >= 0){sum += (num1[i] - '0');i--;}{
-        if(j >= 0){sum += (num2[j] - '0');j--;}{
-        sum += carry; 
-        carry = sum / 10;
-        sum = sum % 10;
+         if(j >= 0){sum += (num2[j] - '0');j--;}{
+         sum += carry; 
+         carry = sum / 10;
+         sum = sum % 10;
+         }
+        }
+        }
         return sum;
         }
-        }
-        int main(){
-       cout << string add (string num1,string num2)<< endl;
-      
-      return 0;
+        
+ int main(){
+     int num1;
+     int num2;
+     cin >> num1;
+     cin >> num2;
+     cout << string add (string num1,string num2)<< endl;
+     return 0;
      }
