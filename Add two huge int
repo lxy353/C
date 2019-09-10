@@ -3,6 +3,9 @@
  using namespace std;
  string add(string num1, string num2){
       string sum;
+      if(num1.length() > num2.length()){
+                swap(num1, num2);
+                }
        int i = num1.size() - 1;
        int j = num1.size() - 1;
        int carry = 0;
@@ -14,7 +17,6 @@
         sum += carry; 
         carry = sum / 10;
         sum = sum % 10;
-        swap(sum.begin(), sum.end());
         return string;
         }
         }
