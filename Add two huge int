@@ -1,23 +1,20 @@
  #include<iostream>
  #include<cmath>
  using namespace std;
- string add(string a, string b){
-       if(string a.length() > string b.length())
-                swap(stra, strb);
-       int i = string a .size() - 1;
-       int j = string b .size() - 1;
+ string add(string num1, string num2){
+      string sum;
+       int i = num1.size() - 1;
+       int j = num1.size() - 1;
        int carry = 0;
-       int string a = string a [i] - '0';
-       int string b = string b [j] - '0';
-       int sum = string a + string b + carry;
-       carry = sum/10；
-       sum = sum%10;
-       sum = " "+ sum =carry
-       }
-      return sum;
-      }
-     int main()
-     {
-       cout << string add (string a,string b)<< endl;
-      return 0;
-     }
+       string  = "";
+        while(i>=0 || j>=0 || carry){
+        long sum = 0;
+        if(i >= 0){sum += (num1[i] - '0');i--;}
+        if(j >= 0){sum += (num2[j] - '0');j--;}
+        sum += carry; 
+        carry = sum / 10;
+        sum = sum % 10;
+        swap(sum.begin(), sum.end());
+        return string;
+        }
+        }
