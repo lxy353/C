@@ -9,7 +9,7 @@
        int i = num1.size() - 1;
        int j = num1.size() - 1;
        int carry = 0;
-       string  = "";
+       sum  = " ";
         while(i>=0 || j>=0 || carry){
         long sum = 0;
         if(i >= 0){sum += (num1[i] - '0');i--;}{
@@ -17,7 +17,7 @@
         sum += carry; 
         carry = sum / 10;
         sum = sum % 10;
-        return string;
+        return sum;
         }
         }
         int main(){
