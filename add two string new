@@ -1,4 +1,4 @@
-#include<iostream>
+ #include<iostream>
  #include<cmath>
  #include<string>
  #include<algorithm>
@@ -8,24 +8,24 @@
                 swap(num1, num2);
                 }
        int i = num1.length() - 1;
-       int j = num1.length() - 1;
+       int j = num2.length() - 1;
        int carry = 0;
        string ans = " ";
        while(i>=0 ){
-        int curr;
+        int sum;
         if(j >= 0){
-            curr = num1[i]-'0'+ num2[j]-'0' + carry;
+            sum = num1[i]-'0'+ num2[j]-'0' + carry;
         }
         else{    
-        curr = num1[i]-'0'+ carry;
-        carry = curr/10;
-        curr = curr%10;
+        sum = num1[i]-'0'+ carry;
         }
-        ans = to_string(curr) + ans;
+        carry = sum/10;
+        sum = sum%10;
+        ans = to_string(sum) + ans;
         i--;
         j--;
-       }
-         if (carry ==1){
+ }
+        if (carry ==1){
         ans = "1" +ans;
         }
        return ans;
@@ -34,8 +34,10 @@
  int main(){
      string num1;
      string num2;
+     cout << "Pls give me a number1:"<<endl;
      cin >> num1;
+     cout << "Pls give me a number2:"<<endl;
      cin >> num2;
-     cout <<  add ( num1, num2);
+     cout << "sum:"<<add(num1,num2)<<endl;
      return 0;
      }
