@@ -32,23 +32,7 @@ int main() {
     int c = 0;
     q[0] = 0;       
            
- while (c >= 0) {      
-    c++;                
-     if(c == 8){      
-        print(q);
-        c = backtrack(c);  
-    }
-    while (c >= 0) {
-        q[c]++;            
-        if(q[c] == 8){          
 
-            q[c] = -1;        
-            c = backtrack(c);
-        }
-        else
-            if(ok(q, c)){
-            break;   
-    }
     }
     return 0;
 }
