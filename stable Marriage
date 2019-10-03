@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+void print(int q[]) {
+   static int solution = 0;
+   cout << "Solution #" << ++solution << ":\nMan\tWoman\n";
+   for (int i = 0; i < 3; ++i)
+      cout << i << "\t" << q[i] << "\n";
+   cout << "\n";
+}
+mp{0,2,1
+   0,2,1
+   1,2,0}
+wp{2,1,0
+  0,1,2
+  2,0,1}
+bool ok(int c,int q[]){
+for(int i=0;i<c;i++){
+if(q[i]==q[c]{
+return false;
+if(mp[c][q[i]]<mp[c][q[c]])&&(wp[q[i][c]<wp[q[i]][i])
+return false;
+else
+return ture;
+}
+int main(){
+int c =0;
+int q[]=0;
+if(ok(c,q))
+return ture;
+cout<<print(q)<<endl;
+return 0;
+}
