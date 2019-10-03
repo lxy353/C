@@ -15,18 +15,19 @@ wp{2,1,0
   2,0,1}
 bool ok(int c,int q[]){
 for(int i=0;i<c;i++){
-if(q[i]==q[c]{
+if(q[i]==q[c]){
 return false;
 if(mp[c][q[i]]<mp[c][q[c]])&&(wp[q[i][c]<wp[q[i]][i])
 return false;
 else
-return ture;
+return true;
 }
 int main(){
 int c =0;
 int q[]=0;
-if(ok(c,q))
-return ture;
-cout<<print(q)<<endl;
+if(ok(c,q)){
+return true;
+cout<<print(q);
+}
 return 0;
 }
