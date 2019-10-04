@@ -15,10 +15,10 @@ int backtrack(int c){
     return c;      
 }
 bool ok(int c,int q[]){
-    int mp[3][3] = { { 0,2,1 },  	 
+   static int mp[3][3] = { { 0,2,1 },  	 
 				{ 0,2,1 },	
 				{ 1,2,0 } };	
-	int wp[3][3] = { { 2,1,0 },		
+   stati int wp[3][3] = { { 2,1,0 },		
 				{ 0,1,2 },		
 				{ 2,0,1 } };	
         
