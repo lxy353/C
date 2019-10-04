@@ -6,6 +6,8 @@ bool ok(int q[8], int c) {
      for(int i =0; i <c;i++){
          ifq[c]==q[i] 
              return false;
+     for(int c =0;adj_table[8][5]!=-1;i++){
+     }
 }
      return true;
 }
@@ -18,36 +20,16 @@ int backtrack(int c){
     return c;      
 }
 
-void print(int q[]) {
-    static int numSolutions = 0;
-    cout << "Solution #" << ++numSolutions << ": ";
-    int i; 
-    for(i = 0; i < 8; i++) 
-    cout << q[i] << " ";
-    cout << endl;
+void print(int c[]) {
+static int count = 0;
+cout << " Soultion number: " << ++count << endl;
+cout << " " << cross[1] << cross[2] << endl;
+cout << cross[0] << cross[3] << cross[4] << cross[5] << endl;
+cout << " " << cross[6] << cross[7] << endl;
+
 }
 
-int main() {
-    int q[8] = {0} ;   
-    int c = 0;
-    q[0] = 0;       
-   while (c >= 0) { 
-        c++;  
-      if(c == 8){ 
-         print(q);
-        c = backtrack(c);  
-    }
-      while (c >= 0) {
-         q[c]++;             
-        if(q[c] == 8){          
-          q[c] = -1;        
-            c = backtrack(c);
-        }
-        else
-            if(ok(q, c)){
-            break;  
-          }
-    }
-    }
+
+
     return 0;
 }
