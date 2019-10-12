@@ -2,34 +2,63 @@
 #include <cmath>
 using namespace std;
 
-bool ok(int q[8], int c) {
-     for(int i =0; i <c;i++){
-         ifq[c]==q[i] 
+bool ok(int q[], int c) {
+static int a[8][5]={{-1},
+                    {0,-1},
+                    {1,-1},
+                    {0,1,2,-1},
+                    {1,2,3,-1},
+                    {2,4,-1},
+                    {0,3,4,-1},
+                    {3,4,5,6,-1}};
+
+     for(int i=0; i <c;i++)
+         if(q[i]==q[c]) 
              return false;
-     for(int c =0;adj_table[8][5]!=-1;i++){
-     }
-}
+     for(int i =0;a[c][i]!=-1;i++)
+     if((q[a[c][i]]+1==q[c])||(q[a[c][i]]-1==q[c])) 
+     return false;
      return true;
 }
 
-int backtrack(int c){
+void backtrack(int &c){
     c--;
     if(c == -1){
         exit (0);
     }
-    return c;      
+  
 }
 
-void print(int c[]) {
+void print(int q[]) {
 static int count = 0;
 cout << " Soultion number: " << ++count << endl;
-cout << " " << cross[1] << cross[2] << endl;
-cout << cross[0] << cross[3] << cross[4] << cross[5] << endl;
-cout << " " << cross[6] << cross[7] << endl;
-
+cout << " " << q[1] << q[2] << endl;
+cout << q[0] << q[3] << q[4] << q[5] << endl;
+cout << " " << q[6] << q[7] << endl;
+cout << endl;
 }
-
-
-
-    return 0;
+int main() {
+        int q[8] = {0} ;   
+            int c = 0;
+            q[0] = 0;       
+            while (c >= 0) { 
+                c++;  
+                if(c >7){ 
+                    print(q);
+                    backtrack(c);  
+                }
+                else 
+                q[c]=-1;
+                while (c >= 0) {
+                    q[c]++;             
+                    if(q[c] > 7){                
+                        backtrack(c);
+                    }
+                    else
+                        if(ok(q, c)){
+                            break;  
+                        }
+                }
+            }
+            return 0;
 }
