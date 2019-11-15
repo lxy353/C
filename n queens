@@ -47,7 +47,8 @@ int nqueens(int n) {
 }
 
 int main() {
- cout<<"Give me a bumber:";
+    int n;
+ cout<<"Give me a number:"<<endl;
  cin >> n;
    for (int i = 0; i < n; ++i)
       cout << "There are " << nqueens(i) << " solutions to the " << i+1 << " queens problem.\n";
