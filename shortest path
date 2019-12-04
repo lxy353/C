@@ -21,7 +21,10 @@ int calculateCost(int i, int j) {
       path[i][j] = to_string(i);
       return weight[i][j];
    }
-      
+    // Declare the cost matrix.
+   // If the cost has already been calculated, return it.
+   // Check for the base case.  
+   // Calculate the costs of the 3 adjacent squares by calling the function recursively
    int up = calculateCost((i+rows-1)%rows, j-1);    
    int left = calculateCost(i, j-1);
    int down = calculateCost((i+1)%rows, j-1);
